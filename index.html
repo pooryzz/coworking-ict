@@ -1,0 +1,158 @@
+html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Coworking Space — Забронировать рабочее место 24/7</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Переключатель киберпанк-темы -->
+  <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+
+  <div class="site-wrapper">
+    <!-- Header / Nav Component -->
+    <header class="site-header">
+      <a href="#" class="brand-logo">IT.SPACE</a>
+      
+      <!-- Чекбокс для бургер-меню на мобильных -->
+      <input type="checkbox" id="burger-toggle" class="burger-checkbox">
+      <label for="burger-toggle" class="burger-icon" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="#tariffs">Тарифы</a></li>
+          <li><a href="#location">Локация</a></li>
+          <li><a href="#amenities">Удобства</a></li>
+          <li><a href="#events">Ивенты</a></li>
+        </ul>
+        <a href="#booking" class="btn btn-primary nav-cta">Тестовый день</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section Component -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Пространство для продуктивной работы 24/7</h1>
+          <p class="hero-subtitle">Высокоскоростной интернет, комфортные рабочие места и сообщество IT-профессионалов.</p>
+          <a href="#location" class="btn btn-hero">Выбрать локацию</a>
+        </div>
+      </section>
+
+      <!-- Grid Section Component (Tariffs) -->
+      <section id="tariffs" class="tariffs-section">
+        <h2 class="section-title">Тарифные планы</h2>
+        <div class="tariffs-grid">
+          
+          <article class="tariff-card">
+            <h3 class="tariff-name">Hot Desk</h3>
+            <p class="tariff-price">120 ₸ <span>/ час</span></p>
+            <ul class="tariff-features">
+              <li>Любое свободное место</li>
+              <li>Доступ к Wi-Fi 1 Gbps</li>
+              <li>Кофе и чай без ограничений</li>
+            </ul>
+            <a href="#booking" class="btn btn-card">Забронировать</a>
+          </article>
+
+          <article class="tariff-card featured">
+            <span class="badge">Популярный</span>
+            <h3 class="tariff-name">Fixed Desk</h3>
+            <p class="tariff-price">65 000 ₸ <span>/ мес</span></p>
+            <ul class="tariff-features">
+              <li>Закрепленный стол 24/7</li>
+              <li>2 часа переговорки в день</li>
+              <li>Локер для вещей</li>
+            </ul>
+            <a href="#booking" class="btn btn-primary">Забронировать</a>
+          </article>
+
+          <article class="tariff-card">
+            <h3 class="tariff-name">Team Office</h3>
+            <p class="tariff-price">250 000 ₸ <span>/ мес</span></p>
+            <ul class="tariff-features">
+              <li>Приватный офис для 4–8 человек</li>
+              <li>Доступ 24/7 по смарт-картам</li>
+              <li>Персональный клининг</li>
+            </ul>
+            <a href="#booking" class="btn btn-card">Забронировать</a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Feedback Form Component -->
+      <section id="booking" class="booking-section">
+        <h2 class="section-title">Бронирование переговорной зоны</h2>
+        <form class="booking-form" action="#" method="post">
+          
+          <div class="form-group">
+            <label for="zone-select">Выбор зоны</label>
+            <select id="zone-select" name="zone" required class="form-input">
+              <option value="">-- Выберите зону --</option>
+              <option value="meeting-room-a">Переговорная A (до 6 чел)</option>
+              <option value="meeting-room-b">Переговорная B (до 12 чел)</option>
+              <option value="skype-room">Skype-кабина</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="time-slot">Временной интервал</label>
+            <select id="time-slot" name="time" required class="form-input">
+              <option value="">-- Выберите время --</option>
+              <option value="09:00-12:00">09:00 - 12:00</option>
+              <option value="12:00-15:00">12:00 - 15:00</option>
+              <option value="15:00-18:00">15:00 - 18:00</option>
+              <option value="18:00-21:00">18:00 - 21:00</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="phone-input">Контактный телефон</label>
+            <input type="tel" id="phone-input" name="phone" placeholder="+7 (700) 000-00-00" pattern="\+?[0-9\s\-\(\)]{10,18}" required class="form-input">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">Забронировать слот</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-block" id="location">
+          <h4>Схема проезда</h4>
+          <p>г. Алматы, пр. Аль-Фараби 71/1</p>
+          <p>Станция метро: «Байконур»</p>
+        </div>
+
+        <div class="footer-block">
+          <h4>Регламент резидентов</h4>
+          <ul class="footer-links">
+            <li><a href="#">Правила коворкинга</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Договор оферты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-block theme-selector">
+          <h4>Оформление</h4>
+          <label for="theme-toggle" class="theme-switch-label">
+            <span class="theme-text">Киберпанк стиль</span>
+            <span class="switch-btn"></span>
+          </label>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 IT.SPACE Coworking. Студент: Махаметов Мажит.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
